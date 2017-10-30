@@ -5,7 +5,7 @@ title:                 Radio Blue EU
 
 # Language of your content in 2-letter code, eg: en, de.
 # You may also provide a location, eg: en-us, de_AT.
-lang:                  en_UK
+lang:                  en-uk
 
 # The unique resource location of your page.
 # Set to `https://<username>.github.io` when hosting on GitHub Pages.
@@ -252,5 +252,29 @@ sass:
 
 # If you are upgrading form v5 (or earlier), uncomment the lines below,
 # so that the location of the feed XML stays the same.
-# feed:
-#   path:                atom.xml
+feed:
+  path:                atom.xml
+  license:             Creative Commons (CC-BY)
+
+podcast:
+  itunes:              http://feeds.soundcloud.com/users/soundcloud:users:340897419/sounds.rss
+  category:
+    - News and Politics
+    
+sc_player:
+  height: # 166 300 450 600
+  # https://developers.soundcloud.com/docs/api/html5-widget
+  config:
+    auto_play: false
+    color: '#3f61cc'
+    buying: false
+    sharing: true
+    download: true
+    show_artwork: true
+    show_user: true
+    start_track: 0
+    hide_related: true
+    show_comments: true
+    show_reposts: true
+    show_teaser: true
+    visual: true

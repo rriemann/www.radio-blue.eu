@@ -1,7 +1,7 @@
 # Config
 # ========================================================================================
 
-title:                 Radio Blue
+title:                 Radio Blue EU
 
 # Language of your content in 2-letter code, eg: en, de.
 # You may also provide a location, eg: en-us, de_AT.
@@ -9,17 +9,15 @@ lang:                  en_UK
 
 # The unique resource location of your page.
 # Set to `https://<username>.github.io` when hosting on GitHub Pages.
-url:                   https://domain.tld
+url:                   https://www.radio-blue.eu
 
 # Set to '' when hosting on GitHub Pages, like `//<username>.github.io`.
 # Set to '/<reponame>' when using the `gh-pages` branch of a repository.
-baseurl:               /hydejack
+baseurl:               ''
 
 # A short description of the page used for the meta description tag.
 description:           >
-  A Jekyll theme with JavaScript powers. "Best Theme by a Mile".
-  Combines the best of static sites and modern web apps.
-  Open `_config.yml` to edit this text.
+  The podcast *Radio Blue EU Brussels* is an independent voluneer project of few trainees of EU institutions.
 
 # A shorter description for the sidebar.
 tagline:               >
@@ -28,23 +26,39 @@ tagline:               >
 
 # A list of keywords for your blog, will be used as fallback
 # for pages that don't have `keywords` in their front matter.
-keywords:              []
+keywords:              [podcast, radio subcommittee, bluebook trainees, European Commission]
+
+theme: jekyll-theme-hydejack
 
 # A (optional) logo for the page. Used by jekyll-seo-tag.
-logo:                  /hydejack/assets/icons/icon.png
+logo:                  /assets/icons/icon.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 # Duplication is necessary due to the jekyll-feed plugin.
-author:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
-  # The remainder of the author configuration is located in `_data/authors.yml`...
+author: # keep in sync with system in _data/authors
+  name:              Radio Blue EU
+  email:             <mail@radio-blue.eu>
+
+  # Used at the bottom of each page and at the top of the `about` layout
+  # Markdown enabled, can use multiple paragraphs (enabled by `|`)
+  about:             |
+    The podcast *Radio Blue EU Brussels* is a voluneer project of few trainees of EU institutions. It is independend and expressed opinion are only those of the authors.
+
+  # This photo will be used in the about section
+  picture:
+    path:            /assets/icons/icon.png
+    # srcset is optional, but can be used to provide higher res versions for retina displays
+    srcset:
+      1x:            /assets/icons/icon-128.png
+      2x:            /assets/icons/icon-256.png
+  # Used by `jekyll-seo-tag`:
+  twitter:           <username>
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 20XX. Open _config.yml to edit this text.
+copyright:             © 2017 Radio Blue EU Brussels.
 
 # Format of the permalinks
-permalink:             pretty
+permalink:             '/:year/:month/:day/:title/'
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              5
@@ -64,8 +78,8 @@ font:                  "'Noto Sans', Helvetica, Arial, sans-serif"
 font_heading:          "'Roboto Slab', Helvetica, Arial, sans-serif"
 
 # Fallback image and color
-accent_image:          /hydejack/assets/img/sidebar-bg.jpg
-accent_color:          '#4fb1ba'
+accent_image:          /assets/images/sidebar-bg.jpg
+accent_color:          '#3f61cc'
 
 # 3rd Party Integrations
 # ----------------------------------------------------------------------------------------

@@ -22,7 +22,7 @@ system:
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
   social:
-    twitter:         <username>
+    twitter:         radioblue_eu
     # github:          <username>
     email:           mailto:<mail@radio-blue.eu>
     rss:             https://www.radio-blue.eu/feed.xml
@@ -62,7 +62,7 @@ system:
     # download:        https://github.com/qwtel/hydejack/archive/v6.6.1.zip
 
   # Used by `jekyll-seo-tag`:
-  twitter:           <username>
+  twitter:           radioblue_eu
 
 # Another author
 mdo:

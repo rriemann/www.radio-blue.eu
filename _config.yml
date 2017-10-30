@@ -52,7 +52,7 @@ author: # keep in sync with system in _data/authors
       1x:            /assets/icons/icon-128.png
       2x:            /assets/icons/icon-256.png
   # Used by `jekyll-seo-tag`:
-  twitter:           <username>
+  twitter:           radioblue_eu
 
 # This text will appear in a `<small>` tag in the footer of every page.
 copyright:             © 2017 Radio Blue EU Brussels.
@@ -201,8 +201,8 @@ plugins:
 #   yandex:              <verification-id>
 
 # Used for Twitter cards
-# twitter:
-#   username:            <shortname>
+twitter:
+  username:            radioblue_eu
 
 # Used for Facebook open graph
 # facebook:

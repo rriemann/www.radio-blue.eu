@@ -254,13 +254,16 @@ sass:
 # so that the location of the feed XML stays the same.
 feed:
   path:                atom.xml
-  license:             Creative Commons (CC-BY)
 
+# configuration of podcast in feed.xml
 podcast:
+  license:             Creative Commons (CC-BY)
   itunes:              http://feeds.soundcloud.com/users/soundcloud:users:340897419/sounds.rss
-  category:
-    - News and Politics
+  category: "News & Politics"
+  explicit: "no"
+  image: /assets/icons/icon-800.png
     
+# configuration of soundcloud
 sc_player:
   height: # 166 300 450 600
   # https://developers.soundcloud.com/docs/api/html5-widget

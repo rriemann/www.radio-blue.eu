@@ -10,12 +10,24 @@ permalink: feed.xml
     <link>{{ site.url }}</link>
     <atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
     <generator>Jekyll {{ jekyll.version }}</generator>
-    <copyright>{{ site.feed.license }}</copyright>
+    <copyright>{{ site.podcast.license }}</copyright>
     <language>{{ site.lang }}</language>
     <lastBuildDate>{% for post in site.posts limit:1 %}{{ post.date | date_to_rfc822 }}{% endfor %}</lastBuildDate>
     {% if site.podcast.itunes %}
       <itunes:new-feed-url>{{ site.podcast.itunes}}</itunes:new-feed-url>
     {% endif %}
+    <itunes:owner>
+      <itunes:name>{{ site.author.name }}</itunes:name>
+      <itunes:email>{{ site.author.email | replace: "<", "&#x3C;" | replace: ">", "&#x3E;" }}</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>{{ site.podcast.explicit }}</itunes:explicit>
+    <itunes:image href="{{ site.podcast.image | absolute_url }}"/>
+    <image>
+      <url>{{ site.podcast.image | absolute_url }}</url>
+      <title>{{ site.title }}</title>
+      <link>{{ site.url }}</link>
+    </image>
+    <itunes:category text="{{ site.podcast.category | escape }}"/>
 
     {% assign posts = site.posts | where_exp: "post", "post.draft != true" %}
     {% for post in posts limit:10 %}
@@ -38,9 +50,9 @@ permalink: feed.xml
         <link>{{ post.url | absolute_url }}</link>
         {% if post.podcast %}
           <enclosure length="{{ post.podcast.mp3.length }}" url="{{ post.podcast.mp3.file }}" type="audio/mpeg"/>
-          <guid isPermaLink="true">{{ post.mp3 | absolute_url }}</guid>
-        {% else %}
           <guid isPermaLink="true">{{ post.podcast.mp3.file | absolute_url }}</guid>
+        {% else %}
+          <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
         {% endif %}
       </item>
     {% endfor %}

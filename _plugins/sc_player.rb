@@ -34,21 +34,19 @@ require 'cgi'
 
 module Jekyll
   class SCPlayerTag < Liquid::Tag
-    def initialize(tag_name, config, token)
+    def initialize(tag_name, id, token)
       super
-
-      @uris  = URI.extract(config)
 
       @height = Jekyll.configuration({})['sc_player']['height'] || 300
       @config = Jekyll.configuration({})['sc_player']['config'] || {}
+      @id = id.strip
     end
 
     def render(context)
-      html = ""
+      uri = "https://api.soundcloud.com/tracks/#{@id}"
 
-      @uris.each_with_index do |uri, index|
-        html << "<iframe id='sc-widget-#{index}' src='https://w.soundcloud.com/player/?url=#{CGI.escape(uri)}&amp;#{URI.encode_www_form(@config)}' width='100%' height='#{@height}' scrolling='no' frameborder='no'></iframe>"
-      end
+      html = "<iframe id='sc-widget-#{@id}' src='https://w.soundcloud.com/player/?url=#{CGI.escape(uri)}&amp;#{URI.encode_www_form(@config)}' width='100%' height='#{@height}' scrolling='no' frameborder='no'></iframe>"
+
       return html
     end
   end

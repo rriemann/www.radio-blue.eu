@@ -41,12 +41,15 @@ permalink: feed.xml
         {% assign post_author_name = post_author.name | default: post_author %}
 
         <dc:creator>{{ post_author_name | default: "" | xml_escape }}</dc:creator>
-        {% if post.excerpt and post.excerpt != empty %}
-          <description>{{ post.excerpt | strip_html | normalize_whitespace | xml_escape }}</description>
+        {% assign excerpt = post.excerpt | strip_html | normalize_whitespace | xml_escape %}
+        {% if excerpt and excerpt != empty %}
+          <description>{{ excerpt }}</description>
         {% else %}
-          <description>{{ post.content | strip_html | normalize_whitespace | xml_escape }}</description>
+          <description>{{ post.content | strip_html | normalize_whitespace | truncatewords: 60 | xml_escape }}</description>
         {% endif %}
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>        
+        <itunes:author>{{ post_author_name | default: "" | xml_escape }}</itunes:author>
+        <itunes:explicit>no</itunes:explicit>
         <link>{{ post.url | absolute_url }}</link>
         {% if post.podcast %}
           <enclosure length="{{ post.podcast.mp3.length }}" url="{{ post.podcast.mp3.file }}" type="audio/mpeg"/>

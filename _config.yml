@@ -153,6 +153,9 @@ collections:
     permalink:         /projects/:path/
     output:            true
 
+  pages:
+    permalink:         /:slug/
+    output:            true
 
 # File inclusion/exclusion
 # ========================================================================================
@@ -167,6 +170,8 @@ exclude:
   - Gemfile.lock
 include:
   - LICENSE.md
+  - _headers
+  - _redirects
 
 
 # Plugins and Plugin Configuration

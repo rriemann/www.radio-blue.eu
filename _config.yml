@@ -134,7 +134,7 @@ hydejack:
   no_theme_color:      false
 
   # Set to `true` when building with the `--lsi` option
-  use_lsi:             false
+  use_lsi:             true
 
 
 # Collections
@@ -254,6 +254,8 @@ compress_html:
 
 sass:
   style:               compressed
+
+lsi: true
 
 # If you are upgrading form v5 (or earlier), uncomment the lines below,
 # so that the location of the feed XML stays the same.

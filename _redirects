@@ -1,0 +1,4 @@
+# Redirects from what the browser requests to what we serve
+# https://www.netlify.com/docs/redirects/
+
+/episode-02 /2017/11/05/episode-02/

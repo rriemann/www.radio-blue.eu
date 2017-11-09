@@ -9,6 +9,7 @@ newsletters:
   - 17.10.2017
   - 24.10.2017
   - 31.10.2017
+  - 07.11.2017
 ---
 
 **The Trainees’ Comittee (EC)** of the European Commission Trainees has its own website at <http://traineescommittee.com>.

@@ -12,15 +12,17 @@ newsletters:
   - 07.11.2017
 ---
 
-**The Trainees’ Comittee (EC)** of the European Commission Trainees has its own website at <http://traineescommittee.com>.
+**The Trainees’ Comittee of the EC)** of the European Commission Trainees has its own website at <http://traineescommittee.com>.
 
-For the convenience, we mirror the weekly Trainees’s Committee Newsletter as well on this site.
+The Trainee’s
 
+{% comment %}
 <ul>
 {% for newsletter in page.newsletters %}
 <li><a href="{{ "/assets/files/tc-news/Newsletter-" | append: newsletter | append: ".pdf" | relative_url }}">Newsletter from {{ newsletter }}</a></li>
 {% endfor %}
 </ul>
+{% endcomment %}
 
 ## Contributing to the TC Newsletter
 

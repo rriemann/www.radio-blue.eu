@@ -17,13 +17,12 @@ Information pursuant to Section 5 Telemedia Act [TMG]:
 
 Entity responsible for the contents of this website:
 
-Trainees’ Subcommittee Radio
+Radio Blue EU
 
 Represented by: Robert Riemann (Co-Coordinator)
 
 **Address** \\
-Trainee Subcommittee Radio \\
-c/o Trainees’ Committee \\
-Rue Joseph-II / Jozef II-straat, 70 (DG EAC) \\
-Second floor, Office 174 \\
-1049 Brussels
+Radio Blue EU
+c/o Robert Riemann \\
+33, rue Berckmans \\
+1060 Bruxelles

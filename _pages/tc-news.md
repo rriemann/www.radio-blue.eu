@@ -14,8 +14,6 @@ newsletters:
 
 **The Trainees’ Comittee of the EC)** of the European Commission Trainees has its own website at <http://traineescommittee.com>.
 
-The Trainee’s
-
 {% comment %}
 <ul>
 {% for newsletter in page.newsletters %}
@@ -26,7 +24,7 @@ The Trainee’s
 
 ## Contributing to the TC Newsletter
 
-The TC accepts contributions to their weekly newsletter. Please sent your content that should not exceed ¼ of a page to [traineescommittee@ec.europa.eu](mailto:traineescommittee@ec.europa.eu?subject=Subcommittee%20Contribution%20for%20the%20Newsletter) before Tuesday 12:00 PM with the subject *Subcommittee Contribution for the Newsletter* (prefilled with link above).
+The TC accepts contributions to their weekly newsletter. EC trainees and TC partners can send their content that should not exceed ¼ of a page to [traineescommittee@ec.europa.eu](mailto:traineescommittee@ec.europa.eu?subject=Subcommittee%20Contribution%20for%20the%20Newsletter) before Tuesday 12:00 PM with the subject *Subcommittee Contribution for the Newsletter* (prefilled with link above).
 
 ## Find the TC
 

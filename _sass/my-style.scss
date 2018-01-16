@@ -5,3 +5,51 @@ img.emoji {
   display: initial;
   margin-bottom: initial;
 }
+
+// for onebox:
+
+$primary: blue;
+$primary-low: red;
+$primary-medium: green;
+$secondary-medium: green;
+$tertiary: pink;
+$font-0: $root-font-size;
+$font-up-1: $root-font-size-medium;
+$font-down-1: 14px;
+$line-height-large: $root-line-height;
+
+// source: https://gist.github.com/tcrammond/3c52defa4576fc3a5855
+$assets-folder: "/assets/images";
+@function image-url ($url) {
+    @return url($assets-folder + '/' + unquote($url));
+}
+
+
+// Stuff we repeat
+@mixin post-aside {
+  border-left: 5px solid $gray;
+  background-color: $primary; // blend-primary-secondary(5%);
+}
+
+.onebox .site-icon {
+  display: initial;
+  max-width: initial;
+  margin-bottom: initial;
+  border: initial;
+}
+
+@import "onebox";
+
+aside.onebox {
+  border: none;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: $gray-text;
+  background-color: $gray-bg;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  
+  .source {
+    background-position: left !important;
+  }
+}
